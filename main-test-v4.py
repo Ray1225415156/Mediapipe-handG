@@ -48,10 +48,10 @@ class Main:
                     x1, x2, x3, x4 = self.detector.fingersUp()
                 x_array = x1, x2, x3, x4
                 if flag == 0:
-                    if elapsed_time % 3 <= 0.001:
-                        x1_old = x1,x2,x3,x4
-                        if x_array != x1_old:
-                            state = random.randint(0, 2)  # 生成 1 到 10 之间的随机整数
+                    # if elapsed_time % 3 <= 0.001:
+                    #     x1_old = x1,x2,x3,x4
+                    #     if x_array != x1_old:
+                    #         state = random.randint(0, 2)  # 生成 1 到 10 之间的随机整数
                 elif flag == 1:
                     if (x2 and x3) == 0 and (x1 and x4 and x5) != 0:
                         state = 0
