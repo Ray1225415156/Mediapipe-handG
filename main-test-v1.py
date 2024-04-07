@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+# 用于手势识别，识别数字
 import cv2
 import serial
 import time

@@ -1,4 +1,6 @@
 # -*- coding:utf-8 -*-
+# 石头剪刀布小游戏
+# 未测试
 import cv2
 import serial
 import time
@@ -48,6 +50,7 @@ class Main:
                     x1, x2, x3, x4 = self.detector.fingersUp()
                 x_array = x1, x2, x3, x4
                 if flag == 0:
+                    1
                     # if elapsed_time % 3 <= 0.001:
                     #     x1_old = x1,x2,x3,x4
                     #     if x_array != x1_old:

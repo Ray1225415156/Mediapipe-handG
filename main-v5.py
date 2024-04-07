@@ -1,3 +1,5 @@
+# 依据角度分级，需侧向放手，共5级
+# 未测试
 import cv2
 import serial
 import time
@@ -21,7 +23,7 @@ class Main:
         # if ser.isOpen():
         #     print(f"串口 {'COM5'} 打开成功")
         while True:
-            current_time = time.time()
+            current_time = time.time()  # 用于时间轴
             elapsed_time = current_time - start_time
             frame, img = self.camera.read()  # 捕获摄像头输入
             img = self.detector.findHands(img)  # 调用findhand函数
@@ -40,7 +42,7 @@ class Main:
                             joint_state[i] = 2  # 半弯曲状态
                         elif (90 <= int(angle[i][0]) <= 120) and (int(angle[i][1]) >= 170):
                             joint_state[i] = 3  # 半弯曲状态
-                        elif (60 <= int(angle[i][0]) <= 90) and (130<= int(angle[i][1]) <= 170):
+                        elif (60 <= int(angle[i][0]) <= 90) and (130 <= int(angle[i][1]) <= 170):
                             joint_state[i] = 4  # 半弯曲状态
                         elif int(angle[i][1]) <= 90:
                             joint_state[i] = 5  # 全弯曲状态

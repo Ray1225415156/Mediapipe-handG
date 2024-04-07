@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -35,7 +36,8 @@ class HandDetector:
                 if draw:
                     self.mpDraw.draw_landmarks(img, handLms, self.mpHands.HAND_CONNECTIONS)
         return img
-
+#注意返回值self.lmlist[][]存储的是关键点x，y，z的相对坐标
+#维度1是关键点的编号，参考图片figure。维度2分别是x，y，z对应的坐标
     def findPosition(self, img, handNo=0, draw=True):
         xList = []
         yList = []

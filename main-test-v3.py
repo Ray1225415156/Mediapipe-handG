@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+# 依据坐标分级，三级
 import cv2
 import serial
 import time

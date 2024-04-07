@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import mediapipe as mp
 import serial
-
+#用于测试
 # ser = serial.Serial('COM3', 9600, timeout=1)  # 不插入串口设备无法执行代码！！！！！！
 
 mp_drawing = mp.solutions.drawing_utils

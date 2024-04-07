@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+# 依据角度分级，共3级
 import cv2
 import serial
 import time
